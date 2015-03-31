@@ -14,6 +14,12 @@ gulp.task('default', ['stylus'], function(){
 	gulp.watch('stylus/*', ['stylus']);
 });
 
+function showError(e) {
+	console.log(e.toString());
+
+	this.emit('end');
+}
+
 /*
 |--------------------------------------------------------------------------
 | Stylus Task
@@ -23,6 +29,7 @@ gulp.task('default', ['stylus'], function(){
 gulp.task('stylus', function(){
 	return gulp.src('stylus/main.styl')
 				.pipe(stylus())
+				.on('error', showError)
 				.pipe(minify())
 				.pipe(rename('style.css'))
 				.pipe(gulp.dest('public/css'));
