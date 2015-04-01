@@ -15,3 +15,18 @@ Route::get('/', function()
 {
 	return View::make('home');
 });
+
+Route::get('/contact', function() 
+{
+	return View::make('contact');
+});
+
+Route::get('/default', function() 
+{
+	return View::make('default');
+});
+
+Route::get('/fullwidth', function()
+{
+	return View::make('fullwidth');
+});

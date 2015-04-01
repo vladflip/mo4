@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	fuck casper
-</body>
-</html>
+@extends('layouts.main')
+@section("body")
+	@parent
+	@include("layouts.inc.home.slider")
+	@include("layouts.inc.home.content")
+@stop

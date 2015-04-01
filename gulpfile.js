@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 */
 
 gulp.task('default', ['stylus'], function(){
-	gulp.watch('stylus/*', ['stylus']);
+	gulp.watch('stylus/**/*', ['stylus']);
 });
 
 function showError(e) {
