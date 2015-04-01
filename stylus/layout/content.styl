@@ -1,18 +1,26 @@
 .content {
 	column(1)
 	background-color:white !important;
-}
-
-.left{
-	col(15/24)
-	margin-bottom:35px;
-} 
-
-.right {
-	col(9/24)
 	
-	div{
+	.left {
+		col(15/24)
 		margin-bottom:35px;
-		background-color:#ccc;
+		
+		@media(max-width:700px) {
+			col(1)
+		}
+	}
+	
+	.right {
+		col(9/24)
+		
+		&>div {
+			margin-bottom:35px;
+			background-color:#ccc;
+		}
+		
+		@media(max-width:700px) {
+			col(1)
+		}
 	}
 }

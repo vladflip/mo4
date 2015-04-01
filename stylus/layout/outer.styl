@@ -1,11 +1,16 @@
-
-
 .outer {
 	center(1000px);
+	
+	& > div {
+		margin-bottom: 35px;
+		background-color:#ccc;
+	}
+	
+	@media (max-width: 700px) {
+		center(400px);
+	}
+	
+	@media (min-width:700px) and (max-width:1100px) {
+		center(680px);
+	}
 }
-
-.outer > div {
-	margin-bottom: 35px;
-	background-color:#ccc;
-}
-
