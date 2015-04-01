@@ -6,11 +6,13 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	@section("body")
-		@include("layouts.inc.header")
-	@show 
-	@section("footer")
-		@include("layouts.inc.footer")
-	@show
+	<div class="outer">
+		@section("body")
+			@include("layouts.inc.header")
+		@show 
+		@section("footer")
+			@include("layouts.inc.footer")
+		@show
+	</div>
 </body>
 </html>
